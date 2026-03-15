@@ -17,7 +17,6 @@ services:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-uadmin", "-pmanish123"]
       interval: 10s
       timeout: 5s
-      retries: 5
     deploy:
       resources:
         limits:
