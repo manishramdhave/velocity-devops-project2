@@ -13,13 +13,5 @@ services:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-    healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-uadmin", "-pmanish123"]
-    deploy:
-      resources:
-        limits:
-          memory: 400M 
-    command: --innodb-buffer-pool-size=64M
-    
 volumes:
   mysql_data:            
